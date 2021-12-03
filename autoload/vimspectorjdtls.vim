@@ -7,7 +7,7 @@ let s:jdt_ls_debugger_port = 0
 function! vimspectorjdtls#StartDebugging() abort
 	if s:jdt_ls_debugger_port <= 0
 		" Get the DAP port
-		let s:jdt_ls_debugger_port = luaeval('require("vimspector-jdtls").start_sync()')
+		let s:jdt_ls_debugger_port = luaeval('require("vimspectorjdtls").start_sync()')
 
 		if s:jdt_ls_debugger_port == ''
 			echom 'Unable to get DAP port - is JDT.LS initialized?'

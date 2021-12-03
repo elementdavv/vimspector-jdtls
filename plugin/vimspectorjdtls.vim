@@ -21,6 +21,7 @@ let g:vimspector_jdtls = 1
 " endfunction
 
 command! StartDebugging call vimspectorjdtls#StartDebugging()
+nmap <Leader>F5 :StartDebugging
 
 " nnoremap <silent> <Plug>StartDebugging :<C-U>call <SID>StartDebugging()<CR>
 " nmap <Leader>F5 <Plug>StartDebugging
