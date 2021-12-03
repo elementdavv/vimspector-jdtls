@@ -7,7 +7,7 @@ function M.start()
 		{command = 'vscode.java.startDebugSession'},
 		function(err, _, resp)
 			assert(not err, vim.inspect(err))
-			print('port:' .. resp)
+			print(vim.inspect(resp))
 		end
 	)
 end
@@ -24,7 +24,6 @@ function M.start_sync()
 	else
 		return ''
 	end
-	-- print(vim.inspect(resp))
 end
 
 return M
