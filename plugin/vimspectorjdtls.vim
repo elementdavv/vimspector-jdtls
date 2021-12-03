@@ -5,4 +5,4 @@ let g:vimspector_jdtls = 1
 
 command! VimspectorJdtlsStartDebug call vimspectorjdtls#StartDebugging()
 
-nmap <Leader>F5 <Esc>:VimspectorJdtlsStartDebug<CR>
+nmap <Leader><F5> <Esc>:VimspectorJdtlsStartDebug
