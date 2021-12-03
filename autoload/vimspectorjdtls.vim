@@ -19,6 +19,3 @@ function! vimspectorjdtls#StartDebugging() abort
 	" Start debugging with the DAP port
 	call vimspector#LaunchWithSettings({ 'DAPPort': s:jdt_ls_debugger_port })
 endfunction
-
-" nnoremap <silent> <Plug>StartDebugging :<C-U>call <SID>StartDebugging()<CR>
-" nmap <Leader>F5 <Plug>StartDebugging
