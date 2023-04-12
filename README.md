@@ -1,41 +1,41 @@
 # Vimspector-Jdtls
-
-Java debug configurations for combination of vimspector and nvim-jdtls.
+Java debug configuration of vimspector width nvim-jdtls.
 
 ## Introduction
-
-Vimspector provides java debug support for YouCompleteMe combination, and nvim-jdtls provides java debug support for nvim-dap combination. But there is no configuration suggestions for the combination of vimspector and nvim-jdtls. That is this plugin does.
+Vimspector provides [java debug with YouCompleteMe](https://github.com/puremourning/vimspector#usage-with-youcompleteme), and nvim-jdtls provides [java debug with nvim-dap](https://github.com/mfussenegger/nvim-jdtls#debugger-via-nvim-dap). If you are using vimspector and nvim-jdtls as well, there is a little trouble to make them working together. That is what this plugin does.
 
 ## Install
-
-Install [vimspector](https://github.com/puremourning/vimspector) and [nvim-jdtls](https://github.com/mfussenegger/nvim-jdtls) first. With the plugin, use your favorite plugin manager to install, eg:
-
+Use your favorite plugin manager to install, eg:
 ```
+Plug 'puremourning/vimspector'
+Plug 'mfussenegger/nvim-jdtls'
 Plug 'elementdavv/vimspector-jdtls'
 ```
 
 ## Configurations
+With vimspector, install java gadget with `./install_gadget.py --force-enable-java` or `:VimspectorInstall vscode-java-debug`. The gadget includes a java-debug-server file(vscode-java-debug/server/com.microsoft.java.debug.plugin-*.jar) that will be used in nvim-jdtls configuration.
 
-Configure vimspector and nvim-jdtls as described in their homepages.
+With nvim-jdtls, download [eclipse.jdt.ls](https://www.eclipse.org/downloads/download.php?file=/jdtls/milestones/1.9.0/jdt-language-server-1.9.0-202203031534.tar.gz), optional [vscode-java-test](https://github.com/microsoft/vscode-java-test/releases/download/0.38.2/vscjava.vscode-java-test-0.38.2.vsix), and optional [google-java-format](https://github.com/google/google-java-format/releases/download/v1.16.0/google-java-format-1.16.0-all-deps.jar) [eclipse-formatter-xml](https://github.com/redhat-developer/vscode-java/blob/master/formatters/eclipse-formatter.xml). 
 
-For vimspector, install java gadget with `./install_gadget.py --force-enable-java` or `:VimspectorInstall vscode-java-debug`. Then make corresponding configurations. The gadget includes java-debug-server jar file that nvim-jdtls will need it.
+Configure vimspector and nvim-jdtls as described in their documents.
 
-For nvim-jdtls, install [eclipse.jdt.ls](https://github.com/eclipse/eclipse.jdt.ls). There is no need to download [java-debug](https://github.com/microsoft/java-debug) because vimspector has got it.
+This plugin does not need any configuration.
 
-On complete configurations of vimspector and nvim-jdtls, the plugin does not need any configuration.
+If you are using nvim-lspconfig, do not call lspconfig.jdtls.setup{}, else you will get two language server instances.
+
+Refer to wiki for sample configurations.
 
 ## Usage
-
-The plugin provides one command:
-
+To trigger java debug, call command:
 ```
 VimspectorJdtlsStartDebug
 ```
 
-and map it to \<Leader>\<F5>. You can remap to other keys as you like.
+The command has been mapped to \<Leader>\<F5>(different than vimspector's default shortcut \<F5>). You can remap to other keys as you like.
 
-This command is to starting a java debug session. Once the session starts, others operations are all the same as in vimspector.
+After a java debug session is started, all functions provided by vimspector and nvim-jdtls are all available.
 
-## Issues
-
-`hotcodereplace` feature not supported.
+## License↴
+[GPL3](LICENSE) ©Element Davv↴
+↴
+Any questions and/or suggestions are appreciatiated.↴
