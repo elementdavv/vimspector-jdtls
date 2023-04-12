@@ -23,7 +23,7 @@ This plugin does not need any configuration.
 
 If you are using nvim-lspconfig, do not call lspconfig.jdtls.setup{}, else you will got two language server instances.
 
-Refer to [wiki](wiki) for sample configurations.
+Refer to [wiki](https://github.com/elementdavv/vimspector-jdtls/wiki) for sample configurations.
 
 ## Usage
 To trigger java debug, call command:
