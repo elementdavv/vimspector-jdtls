@@ -36,6 +36,6 @@ The command has been mapped to \<Leader>\<F5>(different than vimspector's defaul
 After a java debug session is started, all functions provided by vimspector and nvim-jdtls are all available.
 
 ## License↴
-[GPL3](LICENSE) ©Element Davv↴
-↴
-Any questions and/or suggestions are appreciatiated.↴
+[GPL3](LICENSE) ©Element Davv
+
+Any questions and/or suggestions are appreciatiated.
